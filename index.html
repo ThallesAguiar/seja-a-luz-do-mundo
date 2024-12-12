@@ -25,6 +25,12 @@
         text-decoration: none;
         color: inherit;
     }
+
+    /* Estilo para o hover e animação */
+    .btn-animated:hover {
+            transform: scale(1.1); /* Aumenta o tamanho no hover */
+            transition: transform 0.3s ease; /* Animação suave */
+        }
 </style>
 
 <body>
@@ -66,7 +72,7 @@
                 <img id="christmasImage" class="img-fluid rounded mb-3" src="./foto.png" alt="Mensagem de Natal">
             </a>
             <p class="h5">
-                <a href="https://sejaaluzdomundo.org/" target="_blank" rel="noopener noreferrer">
+                <a href="https://sejaaluzdomundo.org/" class="btn btn-light text-info" target="_blank" rel="noopener noreferrer">
                     <b>Vós sois a luz do mundo! Mateus 5:14</b>
                 </a>
                 <br>
@@ -135,6 +141,8 @@
             nameForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
+                audio.volume = 0.5;
+
                 // Reproduzir a música
                 audio.play().then(() => {
                     console.log("Música iniciada.");
@@ -160,7 +168,7 @@
                         <br><br> Com carinho, Thalles Aguiar!
                         <br>
                         <p>
-                            <a href="https://www.vindeacristo.org/seja-a-luz-do-mundo#service-idea-generator" target="_blank" rel="noopener noreferrer"><h4>Conheça o GERADOR DE BONDADE clicando aqui</h4></a>
+                            <a href="https://www.vindeacristo.org/seja-a-luz-do-mundo#service-idea-generator" target="_blank" rel="noopener noreferrer" class="p-3 btn btn-danger text-white btn-animated"><h4>Conheça o GERADOR DE BONDADE clicando aqui</h4></a>
                         </p>
                     `;
 
